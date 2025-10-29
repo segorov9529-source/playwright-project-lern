@@ -6,9 +6,9 @@ export class ProfilePage extends BasePage {
 this.Biografia =page.getByPlaceholder('Short bio about you')
 this.buttonUpdateSettings = page.getByRole('button',{name:'Update Settings'})
     }
-      async pfofileBiografia (userBiogr){
+      async pfofileBiografia (aboutMySelf){
         await this.Biografia.click();
-        await this.Biografia.fill(userBiogr)
+        await this.Biografia.fill(aboutMySelf)
         await this.buttonUpdateSettings.click()
     }
 
