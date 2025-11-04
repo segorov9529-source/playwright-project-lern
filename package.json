@@ -5,7 +5,9 @@
   "scripts": {
     "test": "npx playwright test",
     "test:debug": "npx playwright test --debug",
-    "test:ui": "npx playwright test --ui"
+    "test:ui": "npx playwright test --ui",
+    "allureGen":"allure generate",
+    "allurreOpen":"allure open"
   },
   "author": "",
   "license": "ISC",
