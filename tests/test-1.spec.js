@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { MainPage,ProfilePage,UserMainPage,RegistrationPage,App } from '../src/pages/index';
 import { Builder } from '../src/buider/builder/index';
+import * as allure from "allure-js-commons";
 
 const url = 'https://realworld.qa.guru/';
 let builder;
@@ -16,6 +17,12 @@ await app.registrationPage.register(builder.userName,builder.userEmail,builder.u
   console.log(builder.userEmail,builder.userPassword,builder.userName)
 });
 test ('Пользователь может изменить bio',async({page},testInfo)=>{
+    await allure.displayName("Test Authentication");
+  await allure.owner("Sergei Egorov");
+  await allure.tags("regres", "Profile");
+  await allure.severity("critical");
+  await allure.link("https://example.com/", "Ссылка ЧТЗ");
+    await allure.issue("AUTH-123", "ссылка на задачу");
 await app.userMainPage.personSettingsPage()
 await app.profilePage.pfofileBiografia(builder.aboutMySelf);
 await expect (app.profilePage.Biografia).toContainText(builder.aboutMySelf) // Проверяем что биография ,после нж. сохранения отображена на форме 
