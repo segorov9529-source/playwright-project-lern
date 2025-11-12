@@ -6,8 +6,9 @@
     "test": "npx playwright test",
     "test:debug": "npx playwright test --debug",
     "test:ui": "npx playwright test --ui",
-    "allureGen":"allure generate",
-    "allurreOpen":"allure open"
+    "allureGen":"allure generate ./allure-results --clean",
+    "allureOpen":"allure open ./allure-report"
+
   },
   "author": "",
   "license": "ISC",

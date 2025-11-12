@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3644","Пользователь может изменить bio","chromium","Wed Nov 12 22:23:38 MSK 2025","passed","Wed Nov 12 22:23:42 MSK 2025","Профиль пользователя","test-1.spec.js","",""
